@@ -58,7 +58,7 @@ const ExcelUploder = () => {
       console.log("File uploaded successfully! Download URL:", downloadURL);
 
       const result = await axios.get(
-      `https://qmmrx3tzleuzomugcnsof7tolu0dylsf.lambda-url.eu-west-1.on.aws/polling-scheme/update-via-excel?file_url=${encodeURIComponent(downloadURL)}&dev_test=1`)
+      `https://qmmrx3tzleuzomugcnsof7tolu0dylsf.lambda-url.eu-west-1.on.aws/polling-scheme/update-via-excel?file_url=${encodeURIComponent(downloadURL)}`)
       console.log("Resulttt",result)
       if(result.data.status == 200){
         setMessage("File Uploaded Sucessfully")
